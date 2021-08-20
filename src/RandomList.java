@@ -12,17 +12,14 @@ public class RandomList {
         // 중복되는 숫자가 없도록 짜주자
         for(int i=0; i< ListLength; i++){
             tf = true;
-
             if(i==0){
                 randomIntList.add(random.nextInt(NumericRange));
             }else {
-
                 // 중복성 검사  중복 값이 있으면 다시 주입
                 int randnum;
                 while (tf) {
                     randnum = random.nextInt(NumericRange);
                     // System.out.println("try Input Number : "+randnum);
-
                     //중복성 검사 부분
                     for (Integer integer : randomIntList) {
                         //System.out.println("already numberList: "+integer.intValue());
@@ -31,24 +28,16 @@ public class RandomList {
                             same = false;
                             break;
                         }
-
                         same =true;
                     }
-
                     if(same){
                         randomIntList.add(randnum);
                         tf = false;
                         break;
                     }
-
-
                 }
-
-
             }
-
         }
-
         return randomIntList;
     }
 

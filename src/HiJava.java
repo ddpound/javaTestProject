@@ -6,6 +6,8 @@ public class HiJava {
 
         BubbleSort bubbleSort = new BubbleSort();
         RandomList randomList = new RandomList();
+        StraightSelectionSort straightSelectionSort = new StraightSelectionSort();
+        StraightInsertionSort straightInsertionSort = new StraightInsertionSort();
 
 
         ArrayList<Integer> noDuplicateList = new ArrayList<Integer>();
@@ -15,12 +17,15 @@ public class HiJava {
         System.out.println("\n\n-------------------------중복이 없는 리스트------------------------- ");
         noDuplicateList = randomList.NoDuplicateList(50,100);
         System.out.println("정렬 전 : "+noDuplicateList);
-        System.out.println("정렬 후 : "+bubbleSort.bubbleSort(noDuplicateList));
-
+        System.out.println("버블  정렬 후 : "+bubbleSort.bubbleSort(noDuplicateList));
+        System.out.println("단순 선택 정렬 후 : "+straightSelectionSort.straightselectionSort(noDuplicateList));
+        System.out.println("단순 삽입 정렬 후: "+ straightInsertionSort.straightInsertionSort(noDuplicateList));
         System.out.println("\n\n-------------------------중복이 있는 리스트------------------------- ");
         duplicateList = randomList.duplicatesList(50,100);
         System.out.println("정렬 전 : "+duplicateList);
-        System.out.println("정렬 후 : "+bubbleSort.bubbleSort(duplicateList));
+        System.out.println("버블  정렬 후 : "+bubbleSort.bubbleSort(duplicateList));
+        System.out.println("단순 선택 정렬 후 : "+straightSelectionSort.straightselectionSort(duplicateList));
+        System.out.println("단순 삽입 정렬 후: "+ straightInsertionSort.straightInsertionSort(duplicateList));
 
 
     }
